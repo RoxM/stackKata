@@ -6,6 +6,7 @@ attr_reader :size, :capacity
 def initialize(capacity)
 	@size = 0
 	@capacity = capacity
+	@elements = Array.new(capacity)
 end
 private_class_method :new
 
@@ -23,14 +24,15 @@ end
 
 def push(element)
 	raise Overflow.new if size == capacity
+	@elements[@size] = element
 	@size += 1
-	@element = element
+	nil
 end
 
 def pop
     raise Underflow.new if size == 0
 	@size -= 1
-	return @element
+	return @elements[@size]
 end
 
 end

@@ -41,4 +41,11 @@ it 'When one is push, one is popped' do
 	expect(myStack.pop).to eq 1
 end
 
+it 'When one and two are pushed, two and one is popped' do
+	myStack.push(1)
+	myStack.push(2)
+	expect(myStack.pop).to eq 2
+	expect(myStack.pop).to eq 1
+end
+
 end
