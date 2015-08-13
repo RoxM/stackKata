@@ -23,11 +23,11 @@ it 'After One Push and One Pop Stack Should be Empty' do
 end 
 
 it 'When Pushed Passed Limit Stack Over Flow' do
-	myStack = MyStack.make(2)
-	myStack.push(1)
-	myStack.push(1)
-	myStack.push(1)
-	expect { myStack }.to raise_error
-end
+	expect {
+		myStack.push(1)
+		myStack.push(1)
+		myStack.push(1)
+		}.to raise_error(MyStack::Overflow)
+	end
 
 end
