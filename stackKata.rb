@@ -13,7 +13,10 @@ end
 
 def push(element)
 	@size += 1
-	
+end
+
+def pop(element)
+	@size -= 1
 end
 
 end
