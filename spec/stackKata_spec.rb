@@ -28,6 +28,12 @@ it 'When Pushed Passed Limit Stack Over Flow' do
 		myStack.push(1)
 		myStack.push(1)
 		}.to raise_error(MyStack::Overflow)
-	end
+end
+
+it 'When Empty Stack is Popped, It Should Under Flow' do
+	expect {
+		myStack.pop(1)
+		}.to raise_error(MyStack::Underflow)
+end
 
 end

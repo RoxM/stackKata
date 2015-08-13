@@ -1,6 +1,7 @@
 class MyStack
 
 Overflow = Class.new(RuntimeError)
+Underflow = Class.new(RuntimeError)
 attr_reader :size, :capacity
 def initialize(capacity)
 	@size = 0
@@ -26,6 +27,7 @@ def push(element)
 end
 
 def pop(element)
+    raise Underflow.new if size == 0
 	@size -= 1
 end
 
