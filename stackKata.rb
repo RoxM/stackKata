@@ -1,6 +1,13 @@
 class MyStack
-def initialize
+
+attr_reader :size, :capacity
+def initialize(capacity)
 	@size = 0
+	@capacity = capacity
+end
+
+def self.make(capacity)
+	new(capacity)
 end
 
 def isEmpty
