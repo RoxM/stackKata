@@ -24,11 +24,13 @@ end
 def push(element)
 	raise Overflow.new if size == capacity
 	@size += 1
+	@element = element
 end
 
-def pop(element)
+def pop
     raise Underflow.new if size == 0
 	@size -= 1
+	return @element
 end
 
 end

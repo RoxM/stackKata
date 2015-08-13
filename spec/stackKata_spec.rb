@@ -17,7 +17,7 @@ end
 
 it 'After One Push and One Pop Stack Should be Empty' do
 	myStack.push(1)
-	myStack.pop(1)
+	myStack.pop
 	expect(myStack.getSize).to eq 0
 	expect(myStack.isEmpty).to be_truthy
 end 
@@ -32,8 +32,13 @@ end
 
 it 'When Empty Stack is Popped, It Should Under Flow' do
 	expect {
-		myStack.pop(1)
+		myStack.pop
 		}.to raise_error(MyStack::Underflow)
+end
+
+it 'When one is push, one is popped' do
+	myStack.push(1)
+	expect(myStack.pop).to eq 1
 end
 
 end
