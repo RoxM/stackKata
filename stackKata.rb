@@ -1,4 +1,4 @@
-class MyTestStack
+class MyStack
 
 
 end

@@ -1,8 +1,9 @@
 require_relative "../stackKata"
 
-describe MyTestStack do
+describe MyStack do
 
-context 'nothing' do
+it 'createStack' do
+   @MyStack = MyStack.new
 
 end
 
