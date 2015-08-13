@@ -1,16 +1,19 @@
 class MyStack
 def initialize
-	@empty = true
 	@size = 0
 end
 
 def isEmpty
-	@empty
+	@size == 0
 end
 
 def getSize
 	@size
 end
 
+def push(element)
+	@size += 1
+	
+end
 
 end
