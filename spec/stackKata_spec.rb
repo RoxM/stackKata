@@ -48,4 +48,10 @@ it 'When one and two are pushed, two and one is popped' do
 	expect(myStack.pop).to eq 1
 end
 
+it 'when creating stack with negative size should throw illegal capacity' do
+    expect { 
+       MyStack.make(-1) }
+      .to raise_error(MyStack::IllegalCapacity)
+end
+
 end
